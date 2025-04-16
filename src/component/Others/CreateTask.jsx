@@ -3,13 +3,13 @@ import { AuthContext } from '../../context/AuthProvider';
 
 const CreateTask = () => {
 
-    const[userData, setUserData] = useContext(AuthContext);
+    const {userData, setUserData} = useContext(AuthContext);
 
-    const[title, setTitle] = useState('');
-    const[description, setDescription] = useState('');
-    const[date, setDate] = useState('');
-    const[assignTo, setAssignTo] = useState('');
-    const[category, setCategory] = useState('');
+    const [title, setTitle] = useState('');
+    const [description, setDescription] = useState('');
+    const [date, setDate] = useState('');
+    const [assignTo, setAssignTo] = useState('');
+    const [category, setCategory] = useState('');
 
     const[newTask, setNewTask] = useState({});
 

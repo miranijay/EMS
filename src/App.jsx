@@ -2,15 +2,13 @@ import React, { useContext, useEffect, useState } from "react";
 import Login from "./component/Auth/Login.jsx";
 import EmployeeDashboard from "./component/Dashboard/EmployeeDashboard.jsx";
 import AdminDashboard from "./component/Dashboard/AdminDashboard.jsx";
-import { getLocalStorage, setLocalStorage } from "./Utils/localStorage.jsx";
 import { AuthContext } from "./context/AuthProvider.jsx";
 
 function App() {
 
   const [user, setUser] = useState(null);
   const [loggedInUserData, setLoggedInUserData] = useState(null);
-
-  const [userData, setUserData] = useContext(AuthContext);
+  const {userData} = useContext(AuthContext);
 
   useEffect(() => {
     if(userData){
